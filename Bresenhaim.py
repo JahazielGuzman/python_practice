@@ -1,4 +1,4 @@
-buffer = [[' ' for i in range(21)] for i in range(21)]
+buffer = [[' ' for i in range(50)] for i in range(50)]
 
 def get_line(x1, y1, x2, y2, points):
     issteep = abs(y2-y1) > abs(x2-x1)
@@ -28,10 +28,9 @@ def get_line(x1, y1, x2, y2, points):
         if error < 0:
             y += ystep
             error += deltax
-    # Reverse the list if the coordinates were reversed
     return points
 
-buffer = get_line(0,1,10,20, buffer)
+buffer = get_line(0,1,35,49, buffer)
 
 for row in range(len(buffer)):
     print ''.join(buffer[row])
